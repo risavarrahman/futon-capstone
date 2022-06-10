@@ -1,0 +1,29 @@
+POST http://localhost:5000/api/user/register
+Content-Type: application/json
+
+{
+	"name": "Risav123",
+	"email": "risavbm1010@gmail.com",
+	"password": "raf2710000"
+}
+
+###
+
+POST http://localhost:5000/api/user/login
+Content-Type: application/json
+
+{
+	"email": "voltrodox123@gmail.com",
+	"password": "voltrodox"
+}
+
+###
+
+GET http://localhost:5000/api/animals
+Content-Type: application/json
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkZjM1MmRmZjUzNzFhZGU3NDk4OTEiLCJpYXQiOjE2NTQ2MzM2MjF9.IDL57yEo8Ro9ZnJdjZ7GgsgE3kCXmzArj4F8ez80e-Y
+
+{
+	"name": "Burung Kasuari", 
+	"detail": "Burung Kasuari adalah burung yang terancam punah"
+}
