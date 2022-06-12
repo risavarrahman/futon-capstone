@@ -2,9 +2,9 @@ POST http://localhost:5000/api/user/register
 Content-Type: application/json
 
 {
-	"name": "Risav123",
-	"email": "risavbm1010@gmail.com",
-	"password": "raf2710000"
+	"name": "tes123",
+	"email": "tes123@gmail.com",
+	"password": "tes123"
 }
 
 ###
@@ -19,11 +19,31 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:5000/api/animals
+GET http://localhost:5000/api/animal/lists
+Content-Type: application/json
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkZjM1MmRmZjUzNzFhZGU3NDk4OTEiLCJpYXQiOjE2NTQ2MzM2MjF9.IDL57yEo8Ro9ZnJdjZ7GgsgE3kCXmzArj4F8ez80e-Y
+
+###
+
+
+POST http://localhost:5000/api/animal/lists
 Content-Type: application/json
 auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkZjM1MmRmZjUzNzFhZGU3NDk4OTEiLCJpYXQiOjE2NTQ2MzM2MjF9.IDL57yEo8Ro9ZnJdjZ7GgsgE3kCXmzArj4F8ez80e-Y
 
 {
-	"name": "Burung Kasuari", 
-	"detail": "Burung Kasuari adalah burung yang terancam punah"
+	"name": "Ini Bangau",
+	"description": "Ini Burung Bangau",
+	"photo": "ini link photo"
+}
+
+###
+
+GET http://localhost:5000/api/plant/lists
+Content-Type: application/json
+auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjlkZjM1MmRmZjUzNzFhZGU3NDk4OTEiLCJpYXQiOjE2NTQ2MzM2MjF9.IDL57yEo8Ro9ZnJdjZ7GgsgE3kCXmzArj4F8ez80e-Y
+
+{
+	"name": "Ini Bunga 1",
+	"description": "Ini Bunga 1",
+	"photo": "ini link photo bunga"
 }

@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 // Import Router
 const authRoute = require('./routes/auth');
 const animalRoute = require('./routes/animal');
+const plantRoute = require('./routes/plant');
 
 dotenv.config();
 
@@ -21,5 +22,6 @@ app.get('/', (req, res) => {
 });
 app.use('/api/user', authRoute);
 app.use('/api/animal', animalRoute);
+app.use('/api/plant', plantRoute);
 
 app.listen(5000, () => console.log(`Server running at port 5000`));

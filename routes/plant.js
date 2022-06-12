@@ -1,28 +1,28 @@
 const router = require('express').Router();
-const Animal = require('../model/Animal');
+const Plant = require('../model/Plant');
 const { tokenVerified } = require('./verifyToken');
 
 router.post('/lists', tokenVerified, async (req, res) => {
-  const animal = new Animal({
+  const plant = new Plant({
     name: req.body.name,
     description: req.body.description,
     photo: req.body.photo,
   });
 
   try {
-    const savedAnimal = await animal.save();
-    res.send({ animal });
-    // res.status(200).send(savedAnimal);
-    // Animal.insertMany({ animal });
+    const savedPlant = await plant.save();
+    res.send({ plant });
+    // res.status(200).send(savedPlant);
+    // Plant.insertMany({ plant });
   } catch (err) {
     res.status(400).send(err);
   }
 });
 
 router.get('/lists', tokenVerified, (req, res) => {
-  Animal.find()
-    .then((animal) => {
-      res.status(200).json({ animal });
+  Plant.find()
+    .then((plant) => {
+      res.status(200).json({ plant });
     })
     .catch((err) => {
       console.log(err);
